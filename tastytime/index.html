@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TastyTime — кафе в Харкові | Демо-версія</title>
+<meta name="description" content="TastyTime — кафе на вул. Леся Сердюка, 44 у Харкові. Бургери, хот-доги, закуски та гарячі страви. Демонстраційна версія сайту.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23FFC400'/><text x='50' y='70' font-size='62' text-anchor='middle' font-family='Arial' font-weight='900'>T</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;900&family=Manrope:wght@400;500;700&display=swap&subset=cyrillic" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="demo-bar">Це демонстраційна версія. Сайт не є офіційним сайтом закладу, меню та ціни — приклад.</div>
+<header class="header" id="top">
+  <a href="#top" class="logo">Tasty<span>Time</span></a>
+  <nav class="nav" id="nav" aria-label="Головне меню">
+    <a href="#menu">Меню</a><a href="#about">Про нас</a><a href="#contacts">Контакти</a>
+  </nav>
+  <div class="header-actions">
+    <a class="btn btn-ghost call-btn" href="tel:+380502587576">Зателефонувати</a>
+    <button class="cart-btn" id="cartOpen" aria-label="Відкрити кошик">Кошик <b id="cartCount">0</b></button>
+    <button class="burger" id="burger" aria-label="Меню" aria-expanded="false"><i></i><i></i></button>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="hero-text">
+    <h1>Смачно.<br>Гаряче.<br>Вчасно.</h1>
+    <p>Бургери, хот-доги, хрусткі закуски та гарячі страви на Леся Сердюка. Середній чек — 200–400 грн.</p>
+    <div class="hero-cta">
+      <a class="btn" href="#menu">Дивитись меню</a>
+      <a class="btn btn-ghost" href="#contacts">Як нас знайти</a>
+    </div>
+    <div class="rating"><strong>4,5</strong><span>із 5 на Google Maps</span></div>
+  </div>
+  <div class="hero-visual">
+    <img class="hv hv1" src="images/combo.jpg" alt="Бургер з картоплею фрі та напоєм">
+    <img class="hv hv2" src="images/hotdog.jpg" alt="Хот-дог з соусами та цибулею">
+    <img class="hv hv3" src="images/cheese-sticks.jpg" alt="Сирні палички">
+  </div>
+</section>
+
+<section class="section" id="menu">
+  <div class="wrap">
+    <h2>Меню</h2>
+    <p class="note">Демонстраційне меню: страви, фото та ціни наведені як приклад.</p>
+    <div class="tabs" id="tabs" role="tablist"></div>
+    <div class="grid" id="grid"></div>
+  </div>
+</section>
+
+<section class="section dark" id="about">
+  <div class="wrap about">
+    <div>
+      <h2>Про нас</h2>
+      <p>TastyTime — кафе в Харкові, де можна швидко та смачно пообідати: від соковитих бургерів і хот-догів до гарячих страв та хрустких закусок.</p>
+      <p>Це демонстраційний опис. Реальну історію закладу, команду та особливості кухні можна додати після погодження з власниками.</p>
+      <ul class="facts">
+        <li><b>4,5</b><span>рейтинг Google Maps</span></li>
+        <li><b>200–400 ₴</b><span>середній чек</span></li>
+        <li><b>вул. Леся Сердюка, 44</b><span>Харків</span></li>
+      </ul>
+    </div>
+    <div class="about-img"><img src="images/burger.jpg" alt="Бургер у розрізі" loading="lazy"></div>
+  </div>
+</section>
+
+<section class="section" id="contacts">
+  <div class="wrap contacts">
+    <div>
+      <h2>Контакти</h2>
+      <dl>
+        <dt>Адреса</dt><dd>вул. Леся Сердюка, 44, Харків</dd>
+        <dt>Телефон</dt><dd><a href="tel:+380502587576">+380 50 258 75 76</a></dd>
+        <dt>Рейтинг</dt><dd>4,5 із 5 на Google Maps</dd>
+      </dl>
+      <div class="hero-cta">
+        <a class="btn" href="tel:+380502587576">Зателефонувати</a>
+        <a class="btn btn-ghost" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=TastyTime+вул.+Леся+Сердюка+44+Харків">Прокласти маршрут</a>
+        <a class="btn btn-ghost" id="instaBtn" href="#" aria-disabled="true">Instagram</a>
+      </div>
+      <p class="note" id="instaNote">Кнопка Instagram стане активною після додавання підтвердженого посилання у файлі js/config.js.</p>
+    </div>
+    <div class="map">
+      <iframe title="Карта: TastyTime, вул. Леся Сердюка, 44, Харків" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        src="https://maps.google.com/maps?q=%D0%B2%D1%83%D0%BB.%20%D0%9B%D0%B5%D1%81%D1%8F%20%D0%A1%D0%B5%D1%80%D0%B4%D1%8E%D0%BA%D0%B0%2C%2044%2C%20%D0%A5%D0%B0%D1%80%D0%BA%D1%96%D0%B2&hl=uk&z=16&output=embed"></iframe>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <span>© TastyTime — демонстраційна версія. Не є офіційним сайтом закладу.</span>
+  <a href="#top">Нагору</a>
+</footer>
+
+<a class="fab-call" href="tel:+380502587576" aria-label="Зателефонувати">Зателефонувати</a>
+
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="drawer" aria-label="Кошик" aria-hidden="true">
+  <div class="drawer-head"><h3>Кошик</h3><button id="cartClose" aria-label="Закрити кошик">×</button></div>
+  <div class="drawer-body" id="cartItems"></div>
+  <div class="drawer-foot">
+    <div class="total"><span>Разом</span><b id="cartTotal">0 ₴</b></div>
+    <button class="btn" id="checkout">Оформити (демо)</button>
+    <button class="link" id="clearCart">Очистити кошик</button>
+    <p class="note">Демо: замовлення не надсилається.</p>
+  </div>
+</aside>
+<div class="toast" id="toast" role="status"></div>
+
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
